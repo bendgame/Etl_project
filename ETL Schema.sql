@@ -5,7 +5,7 @@ use comic_db;
 create table characters(
 character_id int primary key
 ,character_name varchar(100)
-,universe varchar(100)
+,universe varchar(25)
 );
 
 create table char_attributes(
