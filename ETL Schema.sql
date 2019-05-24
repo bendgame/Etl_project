@@ -12,7 +12,6 @@ create table char_attributes(
 attribute_id int primary key
 ,real_name nvarchar(100)
 ,character_id int 
-,universe nvarchar(25)
 ,ALIGN nvarchar(25)
 ,EYE nvarchar(25)
 ,SEX nvarchar(25)
