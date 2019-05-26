@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--CSS Link-->
+  <link rel="stylesheet" type="text/css" href="comicCSS.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+        <div class="navigation">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="https://bendgame.github.io/hw11/lp">Comic Character ETL</a>
+                         <ul class="nav navbar-nav ml-auto justify-content-end">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="https://bendgame.github.io/hw11/notebook">View Jupyter Notebook</a>
+                                </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="https://bendgame.github.io/hw11/comparison">View Schema</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="https://github.com/bendgame/Etl_project_eric_Kleppen/raw/master/Comic_Char_data.zip">Download Data</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>  
+            </div>
+
+<div class="jumbotron">
+    <h1 class="display-4">Comic Character ETL Project</h1>
+    <p class="lead">Performing extract, transform, and load techniques to create a database of comic book characters and their powers.</p>
+    <hr class="my-4">
+    <p>This project was done using MySQL and Python 3. The data was extracted from the ComicVine API and the FiveThirtyEight Comic Characters Dataset.
+    </p>
+</div>
+
+<div class="container"> 
+        <div class="row">
+           <div class="col-sm-12 col-md-12">
+              <div class = "box">
+                 <h3>Summary</h3>
+                 <a ><img src="https://github.com/bendgame/Etl_project_eric_Kleppen/blob/master/comicbooks.PNG?raw=true" width="90px" height="90px"  class="float-right img-thumbnail"  alt="..."> </a>
+                 <p class = "sum"> In this project, I designed a relational schema in MySQL, and then populated the database using ETL techniques. Although this was a two-person group project, this website showcases my contribution. The ETL was done using Pandas in Python 3. 
+                     Since comicbook movies have been super popular, we thought it would be entertaining to base our project on comic book characters. After scouring Kaggle, we decided to use the FiveThirtyEight Comic Characters Dataset. To incorporate more data sources, we decided to use the ComicVine API since it is free to use 
+                     and their dataset is extensive. I designed the relational schema in a way that reduces data redundancy and maintains data quality/integrity, adhering to conventional database normalization.
+                 </p>
+              </div>
+           </div>
+           <div class="col-sm-12 col-md-12">
+                <div class = "vizbox">
+                   <!-- <h3  class = viz></h3> -->
+                          <div class="row">
+                                <div class="col-s-12 col-md-4">
+                                        <h5 class = "comp">View the Schema</h5>
+                                        <a href="https://bendgame.github.io/hw11/sma1025"><img src="https://github.com/bendgame/Etl_project_eric_Kleppen/blob/master/MaskedMarvel_comic_book_2.jpg?raw=true" class="img-fluid" alt="Responsive image"></a>
+                                </div>
+                                <div class="col-s-12 col-md-4">
+                                        <h5 class = "comp">Download the Data</h5>
+                                        <a href="https://github.com/bendgame/Etl_project_eric_Kleppen/raw/master/Comic_Char_data.zip"><img src="https://github.com/bendgame/Etl_project_eric_Kleppen/blob/master/3376341189_64a7381d18_b.jpg?raw=true" class="img-fluid" alt="Responsive image"></a>
+               
+                                </div>
+                                <div class="col-s-12 col-md-4">
+                                        <h5 class = "comp">Checkout the Notebook</h5>
+                                        <a href="https://bendgame.github.io/hw11/volumes"><img src="https://github.com/bendgame/Etl_project_eric_Kleppen/blob/master/comicimage.PNG?raw=true" class="img-fluid" alt="Responsive image"></a>
+            
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+           
+</body>
+</html>

@@ -1,0 +1,152 @@
+body{
+    background-color: lightskyblue !important;
+}
+ /* .comp{
+    text-align: center;
+} */
+.navbar-nav {
+    text-align: right !important;
+}
+
+.img-thumbnail {
+    width: 25%; 
+    height: 25%; 
+    margin: 2px;
+}
+.navbar-brand{
+    color: teal !important;
+    padding-left: 28px;
+    font-size: 26px;
+    font: Georgia;  
+}
+.sum{
+  padding: 0;
+  margin: 0;
+  padding-left:0;
+  grid-auto-flow: inherit;
+}
+.box{
+padding: 40px;
+margin: 50px;
+border: 1px solid gray;
+background-color: rgb(238, 238, 238)
+}
+
+.comp-title{
+text-align: center;
+margin-right: 40px;
+color: teal;
+
+}
+
+.vizbox{
+padding-right: 25px;
+padding-left: 25px;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-right: 5px;
+margin-left: 10px;
+margin-top: 5px;
+margin-bottom: 20px;
+border: 1px solid gray;
+background-color: rgb(238, 238, 238);
+}
+
+.jumbotron{
+padding:15px !important;
+padding-left:40px !important;
+
+}
+
+.sborder{
+border: 3px solid teal;
+}
+
+.tableizer-firstrow{
+background-color: teal; 
+color: #FFF;
+font-weight: bold;
+font-size: 26px;
+
+
+}
+.table-responsive{
+padding: 20px;
+margin: 20px;
+border: 100px solid #CCC;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+overflow-x: auto; 
+overflow-y: auto; 
+max-height: 800px;
+max-width: auto;
+background-color: ghostwhite
+
+}
+.compbox{
+margin: 10px;
+}
+@media (min-width: 1200px) {
+.container{
+    max-width: 1200px;
+    margin-right: 120px !important;
+    margin-left: 200px !important;
+}
+}
+
+@media (max-width: 1195px) {
+.viz{
+    font-size: 18px;
+    text-align: left
+}
+h5{
+    font-size: 16px;  
+}
+}
+
+@media (max-width: 992px) {
+.viz{
+    font-size: 14px;
+    text-align: left
+}
+h5{
+    font-size: 12px;  
+}
+}
+
+@media (max-width: 768px) {
+.image-hide{
+    display: none;
+}
+.compbox{
+    margin: 10px;
+}
+.col-sm-12 {
+    margin: 20px !important;
+}
+.jumbotron{
+    /* padding:25px !important; */
+    padding-left:60px !important;
+    padding-right:60px !important;
+}
+.table-responsive{
+    padding: 20px;
+    margin: 20px;
+    border: 10px solid #CCC;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    max-height: 800px;
+    max-width: auto;
+    background-color: ghostwhite
+}
+
+.tableizer-firstrow{
+    background-color: teal; 
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+}
