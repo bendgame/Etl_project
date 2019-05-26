@@ -45,61 +45,64 @@
 </div>
 <div class="container"> 
         <div class="row">
-           <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-6"><img src="https://github.com/bendgame/Etl_project/blob/master/comic_db_ERD.PNG?raw=true" class="img-fluid" alt="Responsive image"></div>
+           <div class="col-sm-12 col-md-6">
               <div class = "schema-box">
-                            <pre style='color:#000000;background:rgb(238, 238, 238);'><span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#400000; '>database</span> comic_db<span style='color:#800080; '>;</span>
+        <pre style='color:#000000;background:rgb(238, 238, 238);'>
+        <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#400000; '>database</span> comic_db<span style='color:#800080; '>;</span>
 
-                            <span style='color:#800000; font-weight:bold; '>use</span> comic_db<span style='color:#800080; '>;</span>
-                            
-                            <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> characters<span style='color:#800080; '>(</span>
-                            character_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
-                            <span style='color:#800080; '>,</span>character_name <span style='color:#bb7977; '>varchar</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>universe <span style='color:#bb7977; '>varchar</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
-                            
-                            <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> char_attributes<span style='color:#800080; '>(</span>
-                            attribute_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
-                            <span style='color:#800080; '>,</span>real_name nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>character_id <span style='color:#bb7977; '>int</span> 
-                            <span style='color:#800080; '>,</span>alignment nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>eye_color nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>15</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>hair_color nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>20</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>gender nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span>first_apperance <span style='color:#bb7977; '>int</span>
-                            <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> characters<span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
-                            
-                            <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> powers<span style='color:#800080; '>(</span>
-                            power_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
-                            <span style='color:#800080; '>,</span><span style='color:#400000; '>power</span> nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>60</span><span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
-                            
-                            <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> char_powers<span style='color:#800080; '>(</span>
-                            power_id <span style='color:#bb7977; '>int</span>
-                            <span style='color:#800080; '>,</span>character_id <span style='color:#bb7977; '>int</span>
-                            <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>power_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> powers<span style='color:#808030; '>(</span>power_id<span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> characters<span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span>
-                            <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
-                            
-                            <span style='color:#800000; font-weight:bold; '>CREATE</span> VIEW v_comic_char_data
-                            <span style='color:#800000; font-weight:bold; '>AS</span>
-                            <span style='color:#800000; font-weight:bold; '>SELECT</span> c<span style='color:#808030; '>.</span>universe
-                                <span style='color:#800080; '>,</span>c<span style='color:#808030; '>.</span>character_id
-                                <span style='color:#800080; '>,</span>c<span style='color:#808030; '>.</span>character_name
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>attribute_id
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>real_name
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>alignment
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>eye_color
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>gender
-                                <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>first_appearance
-                                <span style='color:#800080; '>,</span>p<span style='color:#808030; '>.</span>power_id
-                                <span style='color:#800080; '>,</span>p<span style='color:#808030; '>.</span><span style='color:#400000; '>power</span>
-                            <span style='color:#800000; font-weight:bold; '>FROM</span> characters c
-                            <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> char_attributes a <span style='color:#800000; font-weight:bold; '>ON</span> a<span style='color:#808030; '>.</span>character_id <span style='color:#808030; '>=</span> c<span style='color:#808030; '>.</span>character_id
-                            <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> char_powers cp <span style='color:#800000; font-weight:bold; '>ON</span> cp<span style='color:#808030; '>.</span>character_id <span style='color:#808030; '>=</span> c<span style='color:#808030; '>.</span>character_id
-                            <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> powers p <span style='color:#800000; font-weight:bold; '>ON</span> p<span style='color:#808030; '>.</span>power_id <span style='color:#808030; '>=</span> cp<span style='color:#808030; '>.</span>power_id<span style='color:#800080; '>;</span>
-                            </pre>
-                            <!--Created using ToHtml.com on 2019-05-26 03:16:08 UTC -->
+        <span style='color:#800000; font-weight:bold; '>use</span> comic_db<span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> characters<span style='color:#800080; '>(</span>
+        character_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
+        <span style='color:#800080; '>,</span>character_name <span style='color:#bb7977; '>varchar</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>universe <span style='color:#bb7977; '>varchar</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> char_attributes<span style='color:#800080; '>(</span>
+        attribute_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
+        <span style='color:#800080; '>,</span>real_name nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>character_id <span style='color:#bb7977; '>int</span> 
+        <span style='color:#800080; '>,</span>alignment nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>eye_color nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>15</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>hair_color nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>20</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>gender nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span>first_appearance <span style='color:#bb7977; '>int</span>
+        <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> characters<span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> powers<span style='color:#800080; '>(</span>
+        power_id <span style='color:#bb7977; '>int</span> <span style='color:#800000; font-weight:bold; '>primary</span> <span style='color:#800000; font-weight:bold; '>key</span>
+        <span style='color:#800080; '>,</span><span style='color:#400000; '>power</span> nvarchar<span style='color:#808030; '>(</span><span style='color:#008c00; '>60</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>create</span> <span style='color:#800000; font-weight:bold; '>table</span> char_powers<span style='color:#800080; '>(</span>
+        power_id <span style='color:#bb7977; '>int</span>
+        <span style='color:#800080; '>,</span>character_id <span style='color:#bb7977; '>int</span>
+        <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>power_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> powers<span style='color:#808030; '>(</span>power_id<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>,</span><span style='color:#800000; font-weight:bold; '>foreign</span> <span style='color:#800000; font-weight:bold; '>key</span><span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>REFERENCES</span> characters<span style='color:#808030; '>(</span>character_id<span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>)</span><span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>CREATE</span> VIEW v_comic_char_data
+        <span style='color:#800000; font-weight:bold; '>AS</span>
+        <span style='color:#800000; font-weight:bold; '>SELECT</span> c<span style='color:#808030; '>.</span>universe
+            <span style='color:#800080; '>,</span>c<span style='color:#808030; '>.</span>character_id
+            <span style='color:#800080; '>,</span>c<span style='color:#808030; '>.</span>character_name
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>attribute_id
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>real_name
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>alignment
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>eye_color
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>hair_color
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>gender
+            <span style='color:#800080; '>,</span>a<span style='color:#808030; '>.</span>first_appearance
+            <span style='color:#800080; '>,</span>p<span style='color:#808030; '>.</span>power_id
+            <span style='color:#800080; '>,</span>p<span style='color:#808030; '>.</span><span style='color:#400000; '>power</span>
+        <span style='color:#800000; font-weight:bold; '>FROM</span> characters c
+        <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> char_attributes a <span style='color:#800000; font-weight:bold; '>ON</span> a<span style='color:#808030; '>.</span>character_id <span style='color:#808030; '>=</span> c<span style='color:#808030; '>.</span>character_id
+        <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> char_powers cp <span style='color:#800000; font-weight:bold; '>ON</span> cp<span style='color:#808030; '>.</span>character_id <span style='color:#808030; '>=</span> c<span style='color:#808030; '>.</span>character_id
+        <span style='color:#400000; '>LEFT</span> <span style='color:#800000; font-weight:bold; '>JOIN</span> powers p <span style='color:#800000; font-weight:bold; '>ON</span> p<span style='color:#808030; '>.</span>power_id <span style='color:#808030; '>=</span> cp<span style='color:#808030; '>.</span>power_id<span style='color:#800080; '>;</span>
+        </pre>
+                        <!--Created using ToHtml.com on 2019-05-26 03:16:08 UTC -->
             </div>
         </div>
     </div>
