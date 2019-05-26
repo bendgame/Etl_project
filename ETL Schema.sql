@@ -16,7 +16,7 @@ attribute_id int primary key
 ,eye_color nvarchar(15)
 ,hair_color nvarchar(20)
 ,gender nvarchar(25)
-,first_apperance int
+,first_appearance int
 ,foreign key(character_id) REFERENCES characters(character_id)
 );
 
@@ -41,6 +41,7 @@ SELECT c.universe
 	,a.real_name
 	,a.alignment
 	,a.eye_color
+	,a.hair_color
 	,a.gender
 	,a.first_appearance
 	,p.power_id
